@@ -1,4 +1,5 @@
 # server.R
+# cpk_app
 
 library(ggplot2)
 
@@ -23,9 +24,7 @@ shinyServer(
         xlab('Sample Size (n)') +
         ylab(expression(Minimum~C[p*k])) +
         ylim(ylowerlim, lcb.vec[1]) +
-        geom_point(aes(x = input$n, y = lcb), color = "red", size = 2) +
-        
-      #q + geom_segment(aes(x = input$n, y = input$cpk, xend = input$n, yend = lcb), color = "red", linetype = 2) + geom_segment(aes(x = 0, y = lcb, xend = input$n, yend = lcb), color = "red", linetype = 2)
+        geom_point(aes(x = input$n, y = lcb), color = "red", size = 2)
     })
   }
 )

@@ -1,4 +1,5 @@
 # ui.R
+# cpk_app
 
 shinyUI(fluidPage(
   withMathJax(),
@@ -18,7 +19,7 @@ shinyUI(fluidPage(
                    max = 250),
       sliderInput("conf", label = h5("Confidence level percentage"),
                   min = 0, max = 1, value = 0.95),
-      helpText('The formula used to approxiate the lower bound is from Kushler and Hurley (1992): $$LCL = \\hat{C}_{pk}\\left(1 - \\frac{Z_{1-\\alpha}}{\\sqrt{2(n-1)}}\\right)$$')
+      helpText('The formula used to approxiate the lower bound is from Kushler and Hurley (1992): $$LCL = \\hat{C}_{pk}\\left(1 - \\frac{Z_{\\alpha/2}}{\\sqrt{2(n-1)}}\\right)$$')
       ),
     mainPanel(
       textOutput("text1"),
